@@ -19,6 +19,6 @@ This Bot Use For Enjoy Music With Friends In Telegram Group Voice Chat.
 # Innexia MusicBot Support Channel 
 
 Join Our Support Channel And Type #pyrogram In Our Support Group To Get Pyrogram Session Generator Link.
-[Innexia Support Channel](https://t.me/tc_bots)
+[Support Channel](https://t.me/tc_bots)
 
 
