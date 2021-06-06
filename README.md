@@ -14,13 +14,6 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TcBots/TcPlayer)
 
 
-# Vc Music Bot 
-This Bot Use For Enjoy Music With Friends In Telegram Group Voice Chat.
-
-# Innexia MusicBot Support Channel 
-
-Join Our Support Channel And Type #pyrogram In Our Support Group To Get Pyrogram Session Generator Link.
-[Support Channel](https://t.me/tc_bots)
 
 # Credit 🌀
 ```
