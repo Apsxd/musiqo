@@ -11,12 +11,12 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 async def start_(client: Client, message: Message):
     await message.reply_sticker("CAACAgUAAxkBAAECAAG0YLzhW0U6I8RVSoiIk-BzvF7L7roAAqIDAAJRteFV9AHgzAim6xIfBA")
     await message.reply_text(
-        f"""`Hi` {message.from_user.first_name}!
-\n`This is a VC Music Bot which can play music in your group's Voice Chat.`
-`Powered By` @Tc_Bots 
-\n`To get started simply add me to your group and make me admin. Also do not forget to add my assistant bot` @TcPlayer `to your group`.
-\n`Hit` /help `list of available commands.`
-""",
+        f"""<b>Hi {message.from_user.first_name}!
+\nThis is a VC Music Bot which can play music in your group's Voice Chat.
+Powered By @Tc_Bots 
+\nTo get started simply add me to your group and make me admin. Also do not forget to add my assistant bot @TcPlayer to your group.
+\nHit /help list of available commands.
+<\b>""",
       
        
         reply_markup=InlineKeyboardMarkup(
