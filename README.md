@@ -7,11 +7,12 @@
 # 🎶 Tc Voice Bot 🎶
  Telegram Voice Music Bot 🎶🎸🕺
 
-[![LOGO](https://telegra.ph/file/da795693dfa771c9b8837.jpg)](https://t.me/tcbotsbugs)
+[![LOGO](https://telegra.ph/file/5526fbff6b0414e6626f3.jpg)](https://t.me/tcbotsbugs)
 
 
 # Deploy To Heroku 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TcBots/TcPlayer)
+[![Deploy](https://www.herokucdn.com/d
+eploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TcBots/TcPlayer)
 
 # Vc Music Bot 
 This Bot Use For Enjoy Music With Friends In Telegram Group Voice Chat.
@@ -20,5 +21,16 @@ This Bot Use For Enjoy Music With Friends In Telegram Group Voice Chat.
 
 Join Our Support Channel And Type #pyrogram In Our Support Group To Get Pyrogram Session Generator Link.
 [Support Channel](https://t.me/tc_bots)
+
+# Credit 🌀
+```
+Sᴍᴏᴋᴇ
+Lᴏᴜɪꜱ
+Zᴀʟɪᴍ
+Tᴏxɪᴄ
+```
+
+
+
 
 
