@@ -23,7 +23,7 @@ Powered By @Tc_Bots
             [
                 [
                     InlineKeyboardButton(
-                        "Cʀᴇᴅɪᴛ", url="https://t.me/TcSupport",
+                        "Cʀᴇᴅɪᴛ", url="https://t.me/tcsupporter",
                     )
                 ],
                 [
