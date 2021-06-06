@@ -15,7 +15,7 @@
 
 
 
-# Credit 🌀
+# Credits 🌀
 ```
 SMOKE
 LOUIS
