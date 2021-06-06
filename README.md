@@ -12,7 +12,7 @@
 
 # Deploy To Heroku 
 [![Deploy](https://www.herokucdn.com/d
-eploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TcBots/TcPlayer)
+deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TcBots/TcPlayer)
 
 # Vc Music Bot 
 This Bot Use For Enjoy Music With Friends In Telegram Group Voice Chat.
