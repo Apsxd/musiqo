@@ -17,10 +17,10 @@
 
 # Credit 🌀
 ```
-Sᴍᴏᴋᴇ
-Lᴏᴜɪꜱ
-Zᴀʟɪᴍ
-Tᴏxɪᴄ
+SMOKE
+LOUIS
+ZALIM
+TOXIC
 ```
 
 
