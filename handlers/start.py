@@ -107,10 +107,10 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "Cʜᴀɴɴᴇʟ", url="https://t.me/tc_bots"
+                        "Channel", url="https://t.me/Tubots"
                     ),
                     InlineKeyboardButton(
-                        "Gʀᴏᴜᴘ", url="https://t.me/tcbotsbugs"
+                        "Group", url="https://t.me/unitedbotsupport"
                     )
                 ]
             ]
