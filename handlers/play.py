@@ -242,7 +242,7 @@ async def p_cb(b, cb):
             temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style='md')
-        msg = "**Nᴏᴡ Pʟᴀʏɪɴɢ** in {}".format(cb.message.chat.title)
+        msg = "Now playing in {}".format(cb.message.chat.title)
         msg += "\n- "+ now_playing
         msg += "\n- RᴇQ Bʏ "+by
         temp.pop(0)
@@ -302,9 +302,9 @@ async def m_cb(b, cb):
             temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style='md')
-        msg = "**Nᴏᴡ Pʟᴀʏɪɴɢ** in {}".format(cb.message.chat.title)
+        msg = "Now playing in {}".format(cb.message.chat.title)
         msg += "\n- "+ now_playing
-        msg += "\n- RᴇQ Bʏ "+by
+        msg += "\n- Requested by "+by
         temp.pop(0)
         if temp:
              msg += '\n\n'
@@ -316,7 +316,7 @@ async def m_cb(b, cb):
                  msg += f'\n- RᴇQ Bʏ {usr}\n'
         await cb.message.edit(msg)      
                       
-    elif type_ == 'resume':     
+    elif type_ == 'Resume':     
         if (
             chat_id not in callsmusic.pytgcalls.active_calls
             ) or (
@@ -325,18 +325,18 @@ async def m_cb(b, cb):
                 await cb.answer('Chat is not connected or already playng', show_alert=True)
         else:
             callsmusic.pytgcalls.resume_stream(chat_id)
-            await cb.answer('Music Resumed!')     
+            await cb.answer('streaming resumed')     
     elif type_ == 'puse':         
         if (
             chat_id not in callsmusic.pytgcalls.active_calls
                 ) or (
-                    callsmusic.pytgcalls.active_calls[chat_id] == 'paused'
+                    callsmusic.pytgcalls.active_calls[chat_id] == 'Paused'
                 ):
             await cb.answer('Chat is not connected or already paused', show_alert=True)
         else:
             callsmusic.pytgcalls.pause_stream(chat_id)
             
-            await cb.answer('Music Paused!')
+            await cb.answer('streaming paused')
     elif type_ == 'cls':          
         await cb.answer('Closed menu')
         await cb.message.delete()       
@@ -374,7 +374,7 @@ async def m_cb(b, cb):
             if callsmusic.queues.is_empty(chat_id):
                 callsmusic.pytgcalls.leave_group_call(chat_id)
                 
-                await cb.message.edit('- No More Playlist..\n- Leaving VC!')
+                await cb.message.edit('- No More Playlist..\n- Leaving Voice chat')
             else:
                 callsmusic.pytgcalls.change_stream(
                     chat_id,
@@ -382,7 +382,7 @@ async def m_cb(b, cb):
                 )
                 await cb.answer('Skipped')
                 await cb.message.edit((m_chat, qeue), reply_markup=r_ply(the_data))
-                await cb.message.reply_text(f'- Skipped track\n- Now Playing **{qeue[0][0]}**')
+                await cb.message.reply_text(f'- Skipped track\n- Now playing **{qeue[0][0]}**')
 
     else:      
         if chat_id in callsmusic.pytgcalls.active_calls:
@@ -406,7 +406,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "@TcPlayerBot"
+        user.first_name =  "BlissMusicRobot"
     usar = user
     wew = usar.id
     try:
@@ -419,7 +419,7 @@ async def play(_, message: Message):
                               invitelink = await _.export_chat_invite_link(chid)
                           except:
                               await lel.edit(
-                                  "<b>Aᴅᴅ Mᴇ Aꜱ Aᴅᴍɪɴ Oꜰ Yᴏᴜʀ Gʀᴏᴜᴘ Fɪʀꜱᴛ</b>",
+                                  "<b>Add me as admin in your group</b>",
                               )
                               return
 
