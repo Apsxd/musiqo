@@ -12,10 +12,7 @@ async def start_(client: Client, message: Message):
     await message.reply_sticker("CAACAgUAAxkBAAECAAG0YLzhW0U6I8RVSoiIk-BzvF7L7roAAqIDAAJRteFV9AHgzAim6xIfBA")
     await message.reply_text(
         f"""<b>Hi {message.from_user.first_name}!
-\nThis is a VC Music Bot which can play music in your group's Voice Chat.
-Powered By @Tc_Bots 
-\nTo get started simply add me to your group and make me admin. Also do not forget to add my assistant bot @TcPlayer to your group.
-\nHit /help list of available commands.
+\n
 <\b>""",
       
        
@@ -23,23 +20,23 @@ Powered By @Tc_Bots
             [
                 [
                     InlineKeyboardButton(
-                        "Cʀᴇᴅɪᴛ", url="https://t.me/tcsupporter",
+                        "Credit", url="https://t.me/luciddo",
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "Gʀᴏᴜᴘ", url="https://t.me/Tcbotsbugs"
+                        "Group", url="https://t.me/unitedbotsupport"
                     ),
                     InlineKeyboardButton(
-                        "Cʜᴀɴɴᴇʟ", url="https://t.me/tc_bots"
+                        "Channel", url="https://t.me/Tubots"
                     ),
                     InlineKeyboardButton(
-                        "Sᴏᴜʀᴄᴇ", url="https://github.com/tcbots/TcPlayer"
+                        "Bliss song", url="https://t.me/missblissrobot"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "Aᴅᴅ Mᴇ", url="https://t.me/TcPlayerBot?startgroup=true"
+                        "ADD TO GROUPS", url="https://t.me/BlissMusicRobot?startgroup=true"
                     ) 
                 ]
             ]
@@ -53,23 +50,23 @@ Powered By @Tc_Bots
 )
 async def start(client: Client, message: Message):
     await message.reply_text(
-        "💁🏻‍♂️ Do you want to search for a YouTube video?",
+        "Do you want to search for a YouTube video?",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Cʜᴀɴɴᴇʟ", url="https://t.me/tc_bots"
+                        "Channel", url="https://t.me/Tubots"
                     ),
                     InlineKeyboardButton(
-                        "Gʀᴏᴜᴘ", url="https://t.me/tcbotsbugs"
+                        "Group", url="https://t.me/Unitedbotsupport"
                     )
                 ],    
                 [    
                     InlineKeyboardButton(
-                        "✅ Yes", switch_inline_query_current_chat=""
+                        "Yes", switch_inline_query_current_chat=""
                     ),
                     InlineKeyboardButton(
-                        "No ❌", callback_data="close"
+                        "No", callback_data="close"
                     )
                 ]
             ]
