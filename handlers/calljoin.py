@@ -13,21 +13,21 @@ async def addchannel(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>A M A A A O Y G F.</b>",
+            "<b>....</b>",
         )
         return
 
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "TcPlayerBot"
+        user.first_name =  "BlissMusicRobot"
 
     try:
         await USER.join_chat(invitelink)
         await USER.send_message(message.chat.id,"I J H A Y RQ")
     except UserAlreadyParticipant:
         await message.reply_text(
-            "<b>@TcPlayer A I Y C</b>",
+            "<b>..</b>",
         )
         pass
     except Exception as e:
