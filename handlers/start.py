@@ -11,8 +11,11 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 async def start_(client: Client, message: Message):
     await message.reply_sticker("CAACAgUAAxkBAAECAAG0YLzhW0U6I8RVSoiIk-BzvF7L7roAAqIDAAJRteFV9AHgzAim6xIfBA")
     await message.reply_text(
-        f"""<b>Hi {message.from_user.first_name}!
-\n
+        f"""<b>Welcome {message.from_user.first_name}!
+BlissMusic is a project designed for play, as simple as possible, music in your groups through the new voice chats introduced by Telegram.
+
+❓How to use it?
+Press the » /help command to view the full list of the commands of the bot!
 <\b>""",
       
        
