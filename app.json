@@ -1,9 +1,9 @@
 {
-    "name": "TcPlayerBot",
-    "logo": "https://telegra.ph/file/da795693dfa771c9b8837.jpg",
-    "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
+    "name": "Vcheroku",
+    "logo": "https://telegra.ph/file/f6fad124b1ffd3cf8eefb.png",
+    "description": "🤳 hehehehe",
     "keywords": ["music", "voicechat", "telegram"],
-    "repository": "https://github.com/tcBots/TcPlayer",
+    "repository": "https://github.com/Basi-mon/Vcheroku",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
