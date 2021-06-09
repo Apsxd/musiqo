@@ -168,16 +168,16 @@ def updated_stats(chat, queue, vol=100):
 
 def r_ply(type_):
     if type_ == 'play':
-        ico = '▶'
+        ico = 'PlAY'
     else:
-        ico = '⏸'
+        ico = 'PLAY'
     mar = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton('⏹', 'Leave'),
-                InlineKeyboardButton('⏸', 'Pause'),
-                InlineKeyboardButton('▶️', 'Resume'),
-                InlineKeyboardButton('⏭', 'Skip')
+                InlineKeyboardButton('LEAVE', 'Leave'),
+                InlineKeyboardButton('PAUSE', 'Pause'),
+                InlineKeyboardButton('RESUME', 'Resume'),
+                InlineKeyboardButton('SKIP', 'Skip')
                 
             ],
             [
@@ -347,10 +347,10 @@ async def m_cb(b, cb):
         marr = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('⏹', 'Leave'),
-                    InlineKeyboardButton('⏸', 'Pause'),
-                    InlineKeyboardButton('▶️', 'Resume'),
-                    InlineKeyboardButton('⏭', 'Skip')
+                    InlineKeyboardButton('LEAVE', 'Leave'),
+                    InlineKeyboardButton('PAUSW', 'Pause'),
+                    InlineKeyboardButton('RESUME', 'Resume'),
+                    InlineKeyboardButton('SKIP', 'Skip')
                 
                 ],
                 [
@@ -611,7 +611,7 @@ async def deezer(client: Client, message_: Message):
         url = r[0]["url"]
     except:
         await res.edit(
-            "Fᴏᴜɴᴅ Lɪᴛᴇʀᴀʟʟʏ Nᴏᴛʜɪɴɢ, Yᴏᴜ Sʜᴏᴜʟᴅ Wᴏʀᴋ Oɴ Yᴏᴜʀ Eɴɢʟɪꜱʜ!"
+            "Nothing found"
         )
         is_playing = False
         return
