@@ -9,7 +9,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
     & ~ filters.edited
 )
 async def start_(client: Client, message: Message):
-    await message.reply_sticker(CAACAgIAAxkBAAFDgbdgvwiTHFC9NSVmiePow70hexmH5QACsgADL0ojB_9n4AABYBHysh8E"")
+    await message.reply_sticker("CAACAgIAAxkBAAFDgbdgvwiTHFC9NSVmiePow70hexmH5QACsgADL0ojB_9n4AABYBHysh8E")
     await message.reply_text(
         f"""<b>[💌](https://telegra.ph/file/f6fad124b1ffd3cf8eefb.png) Welcome {message.from_user.first_name}!
 **BlissMusic** is a project designed for **play**, as **simple** as possible, music in your groups through the new **voice chats** introduced by Telegram.
