@@ -1,3 +1,5 @@
+#copyright just rewrote the code we dont deserve anything 😴
+
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
