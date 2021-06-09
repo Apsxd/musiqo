@@ -9,13 +9,14 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
     & ~ filters.edited
 )
 async def start_(client: Client, message: Message):
-    await message.reply_sticker("CAACAgIAAxkBAAFDgbdgvwiTHFC9NSVmiePow70hexmH5QACsgADL0ojB_9n4AABYBHysh8E")
+    await message.reply_sticker("AAxkBAAFDgbdgvwiTHFC9NSVmiePow70hexmH5QACsADL0ojB9n4AABYBHyE")
     await message.reply_text(
-        f"""<b>🏖️ Welcome {message.from_user.first_name}!
-BlissMusic is a project designed for play, as simple as possible, music in your groups through the new voice chats introduced by Telegram.
+        f"""<b>[💌](https://telegra.ph/file/f6fad124b1ffd3cf8eefb.png) Welcome {message.from_user.first_name}!
+**BlissMusic** is a project designed for **play**, as **simple** as possible, music in your groups through the new **voice chats** introduced by Telegram.
 
-❓How to use it?
-Press the » /help command to view the full list of the commands of the bot!
+**❓How to use it?**
+Press the » COMMANDS to view the full list of the commands of the bot!
+Aand read /info to know about this bot
 <\b>""",
       
        
@@ -23,18 +24,18 @@ Press the » /help command to view the full list of the commands of the bot!
             [
                 [
                     InlineKeyboardButton(
-                        "Credit", url="https://t.me/luciddo",
+                        "COMMANDS", url="https://telegra.ph/𝚖𝚞𝚜𝚒𝚚𝚘-Sᴏɴɢ-06-09",
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "Group", url="https://t.me/unitedbotsupport"
+                        "GROUP", url="https://t.me/unitedbotsupport"
                     ),
                     InlineKeyboardButton(
-                        "Channel", url="https://t.me/Tubots"
+                        "CHANNEL", url="https://t.me/Tubots"
                     ),
                     InlineKeyboardButton(
-                        "Bliss song", url="https://t.me/missblissrobot"
+                        "CREDITS", url="https://t.me/Psycho_Bots"
                     )
                 ],
                 [
@@ -77,31 +78,16 @@ async def start(client: Client, message: Message):
     )
 
 @Client.on_message(
-    filters.command("help")
+    filters.command("info")
     & filters.private
     & ~ filters.edited
 )
-async def help(client: Client, message: Message):
+async def info(client: Client, message: Message):
     await message.reply_text(
         f"""<b>Hi {message.from_user.first_name}!
-\n/play <song name> - play song you requested
-/dplay <song name> - play song you requested via deezer
-/splay <song name> - play song you requested via jio saavn
-/playlist - Show now playing list
-/current - Show now playing
-/song <song name> - download songs you want quickly
-/search <query> - search videos on youtube with details
-/deezer <song name> - download songs you want quickly via deezer
-/saavn <song name> - download songs you want quickly via saavn
-/video <song name> - download videos you want quickly
-\n*Admins only*
-/player - open music player settings panel
-/pause - pause song play
-/resume - resume song play
-/skip - play next song
-/end - stop music play
-/userbotjoin - invite assistant to your chat
-/admincache - Refresh admin list
+Join our group for reporting issues and bugs check commands [click here](https://telegra.ph/𝚖𝚞𝚜𝚒𝚚𝚘-Sᴏɴɢ-06-09)
+
+use @missblissrobot for downloading songs
  </b>""",
         reply_markup=InlineKeyboardMarkup(
             [
