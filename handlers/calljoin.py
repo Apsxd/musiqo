@@ -4,7 +4,7 @@ from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserAlreadyParticipant
 from helpers.decorators import errors, authorized_users_only
 
-@Client.on_message(filters.group & filters.command(["userbotjoin"]))
+@Client.on_message(filters.group & filters.command(["join"]))
 @authorized_users_only
 @errors
 async def addchannel(client, message):
@@ -24,7 +24,7 @@ async def addchannel(client, message):
 
     try:
         await USER.join_chat(invitelink)
-        await USER.send_message(message.chat.id,"I J H A Y RQ")
+        await USER.send_message(message.chat.id,"..")
     except UserAlreadyParticipant:
         await message.reply_text(
             "<b>..</b>",
