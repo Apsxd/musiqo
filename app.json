@@ -1,9 +1,9 @@
 {
     "name": "Vcheroku",
     "logo": "https://telegra.ph/file/f6fad124b1ffd3cf8eefb.png",
-    "description": "🤳 hehehehe",
+    "description": "Musiqo is a project to play song on voice chats intoduced by telegram",
     "keywords": ["music", "voicechat", "telegram"],
-    "repository": "https://github.com/Basi-mon/Vcheroku",
+    "repository": "https://github.com/LucidoXD/musiqo",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
@@ -11,11 +11,11 @@
             "required": true
         },
         "BOT_TOKEN": {
-            "description": "From @BotFather",
+            "description": "token get it from botfather",
             "required": true
         },
         "BOT_NAME": {
-            "description": "Your Bot Name.",
+            "description": "name of bot",
             "required": false,
             "value": ""
        },
