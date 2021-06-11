@@ -174,18 +174,18 @@ def r_ply(type_):
     mar = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton('LEAVE', 'Leave'),
-                InlineKeyboardButton('PAUSE', 'Pause'),
-                InlineKeyboardButton('RESUME', 'Resume'),
-                InlineKeyboardButton('SKIP', 'Skip')
+                InlineKeyboardButton('LEA', 'Leave'),
+                InlineKeyboardButton('PAU', 'Pause'),
+                InlineKeyboardButton('RES', 'Resume'),
+                InlineKeyboardButton('SKI', 'Skip')
                 
             ],
             [
-                InlineKeyboardButton('Playlist', 'playlist'),
+                InlineKeyboardButton('PLAYLIST', 'playlist'),
                 
             ],
             [       
-                InlineKeyboardButton("Close",'cls')
+                InlineKeyboardButton("CLOSE",'cls')
             ]        
         ]
     )
@@ -347,18 +347,18 @@ async def m_cb(b, cb):
         marr = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('LEAVE', 'Leave'),
-                    InlineKeyboardButton('PAUSW', 'Pause'),
-                    InlineKeyboardButton('RESUME', 'Resume'),
-                    InlineKeyboardButton('SKIP', 'Skip')
+                    InlineKeyboardButton('LEA', 'Leave'),
+                    InlineKeyboardButton('PAU', 'Pause'),
+                    InlineKeyboardButton('RES', 'Resume'),
+                    InlineKeyboardButton('SKI', 'Skip')
                 
                 ],
                 [
-                    InlineKeyboardButton('Playlist', 'playlist'),
+                    InlineKeyboardButton('PLAYLIST', 'playlist'),
                 
                 ],
                 [       
-                    InlineKeyboardButton("Close",'cls')
+                    InlineKeyboardButton("CLOSE",'cls')
                 ]        
             ]
         )
@@ -399,7 +399,7 @@ async def m_cb(b, cb):
 @Client.on_message(command("play") & other_filters)
 async def play(_, message: Message):
     global que
-    lel = await message.reply("playing")
+    lel = await message.reply("finding")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -449,7 +449,7 @@ async def play(_, message: Message):
         return     
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
-    await lel.edit("getting")
+    await lel.edit("downloading")
     sender_id = message.from_user.id
     user_id = message.from_user.id
     sender_name = message.from_user.first_name
@@ -460,7 +460,7 @@ async def play(_, message: Message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    await lel.edit("downloading")
+    await lel.edit("streaming")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -484,20 +484,16 @@ async def play(_, message: Message):
             [   
                 [
                                
-                    InlineKeyboardButton('Playlist', callback_data='playlist'),
-                    InlineKeyboardButton('Menu', callback_data='menu')
+                    InlineKeyboardButton('PLAYLIST', callback_data='playlist'),
+                    InlineKeyboardButton('SETTINGS', callback_data='menu')
                 
                 ],                     
                 [
-                    InlineKeyboardButton(
-                        text="YT link",
-                        url=f"{url}")
+                    InlineKeyboardButton(text="YT WATCH", url=f"{url}")
 
                 ],
                 [       
-                    InlineKeyboardButton(
-                        text="Close",
-                        callback_data='cls')
+                    InlineKeyboardButton(text="CLOSE", callback_data='cls')
 
                 ]                             
             ]
