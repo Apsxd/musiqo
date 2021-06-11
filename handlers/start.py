@@ -14,10 +14,10 @@ async def start_(client: Client, message: Message):
     await message.reply_sticker("CAACAgIAAxkBAAFDgbdgvwiTHFC9NSVmiePow70hexmH5QACsgADL0ojB_9n4AABYBHysh8E")
     await message.reply_text(
         f"""<b>[💌](https://telegra.ph/file/f6fad124b1ffd3cf8eefb.png) Welcome {message.from_user.first_name}!
-**musiqo** is a BOT designed for **play**, as **simple** as possible, music in your groups through the new **voice chats** introduced by Telegram.
+**musiqo** is a bot designed for **stream** on your group, as **simple** as possible, through the **voice chats** in your group.
 
 **❓How to use it?**
-Press the » COMMANDS to view the full list of the commands of the bot!
+Press the » "*COMMANDS** to view the full list of the commands of the bot!
 and read /help to know about this bot
 <\b>""",
       
