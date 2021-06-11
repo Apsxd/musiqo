@@ -95,25 +95,13 @@ use @missblissrobot for downloading songs
             [
                 [
                     InlineKeyboardButton(
-                        "COMMANDS", url="https://telegra.ph/𝚖𝚞𝚜𝚒𝚚𝚘-Sᴏɴɢ-06-09",
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
                         "SOURCE CODE", url="https://github.com/LucidoXD/musiqo"
                     ),
                     InlineKeyboardButton(
-                        "CONTACT US", url="https://t.me/unitedbotsupport"
-                    ),
-                    InlineKeyboardButton(
-                        "YOUTUBE", switch_inline_query_current_chat=""""
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
                         "WEBSITE", url="https://cutt.ly/GjBGQ0D"
-                    ) 
+                    )
                 ]
             ]
         )
-    )
+    )    
+© 2021 GitHub, Inc.
