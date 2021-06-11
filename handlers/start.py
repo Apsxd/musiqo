@@ -69,10 +69,10 @@ async def start(client: Client, message: Message):
                 ],    
                 [    
                     InlineKeyboardButton(
-                        "Yes", switch_inline_query_current_chat=""
+                        "YES", switch_inline_query_current_chat=""
                     ),
                     InlineKeyboardButton(
-                        "No", callback_data="close"
+                        "NO", callback_data="close"
                     )
                 ]
             ]
@@ -84,7 +84,7 @@ async def start(client: Client, message: Message):
     & filters.private
     & ~ filters.edited
 )
-async def info(client: Client, message: Message):
+async def help(client: Client, message: Message):
     await message.reply_text(
         f"""<b>Hi {message.from_user.first_name}!
 Join our group for reporting issues and bugs check commands [click here](https://telegra.ph/𝚖𝚞𝚜𝚒𝚚𝚘-Sᴏɴɢ-06-09)
@@ -95,12 +95,25 @@ use @missblissrobot for downloading songs
             [
                 [
                     InlineKeyboardButton(
-                        "CHANNEL", url="https://t.me/Tubots"
+                        "COMMANDS", url="https://telegra.ph/𝚖𝚞𝚜𝚒𝚚𝚘-Sᴏɴɢ-06-09",
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
+                        "SOURCE CODE", url="https://github.com/LucidoXD/musiqo"
                     ),
                     InlineKeyboardButton(
-                        "GROUP", url="https://t.me/unitedbotsupport"
+                        "CONTACT US", url="https://t.me/unitedbotsupport"
+                    ),
+                    InlineKeyboardButton(
+                        "YOUTUBE", switch_inline_query_current_chat=""""
                     )
+                ],
+                [
+                    InlineKeyboardButton(
+                        "WEBSITE", url="https://cutt.ly/GjBGQ0D"
+                    ) 
                 ]
             ]
         )
-    )    
+    )
