@@ -61,7 +61,7 @@ def song(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = '**🎵 Uploaded by @missblissrobot **'
+        rep = 'Uploaded By @missblissrobot'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -69,7 +69,7 @@ def song(client, message):
         message.reply_audio(audio_file, caption=rep, thumb=thumb_name, parse_mode='md', title=title, duration=dur)
         m.delete()
     except Exception as e:
-        m.edit('❌ Eʀʀᴏʀ')
+        m.edit('Error')
         print(e)
 
     try:
@@ -128,7 +128,7 @@ async def progress(current, total, message, start, type_of_ps, file_name=None):
         if file_name:
             try:
                 await message.edit(
-                    "{}\n**Fɪʟᴇ Nᴀᴍᴇ:** `{}`\n{}".format(type_of_ps, file_name, tmp)
+                    "{}\n**file name:** `{}`\n{}".format(type_of_ps, file_name, tmp)
                 )
             except FloodWait as e:
                 await asyncio.sleep(e.x)
@@ -378,7 +378,7 @@ async def ytmusic(client,message: Message):
     
     c_time = time.time()
     file_stark = f"{ytdl_data['id']}.mp4"
-    capy = f"**Vɪᴅᴇᴏ Nᴀᴍᴇ ➠** `{thum}` \n**RᴇQᴜᴇꜱᴛ Fᴏʀ :** `{urlissed}` \n**Cʜᴀɴɴᴇʟ :** `{thums}` \n**Lɪɴᴋ :** `{mo}`"
+    capy = f"**vid name** `{thum}` \n**requested :** `{urlissed}` \n**channel :** `{thums}` \n**link :** `{mo}`"
     await client.send_video(message.chat.id, video = open(file_stark, "rb"), duration = int(ytdl_data["duration"]), file_name = str(ytdl_data["title"]), thumb = sedlyf, caption = capy, supports_streaming = True , progress=progress, progress_args=(pablo, c_time, f'`Uᴘʟᴏᴀᴅɪɴɢ {urlissed} Sᴏɴɢ Fʀᴏᴍ YᴏᴜTᴜʙᴇ Mᴜꜱɪᴄ!`', file_stark))
     await pablo.delete()
     is_downloading = False
