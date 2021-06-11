@@ -485,15 +485,19 @@ async def play(_, message: Message):
                 [
                                
                     InlineKeyboardButton('PLAYLIST', callback_data='playlist'),
-                    InlineKeyboardButton('SETTINGS', callback_data='menu')
+                    InlineKeyboardButton('MENU', callback_data='menu')
                 
                 ],                     
                 [
-                    InlineKeyboardButton(text="YT WATCH", url=f"{url}")
+                    InlineKeyboardButton(
+                        text="WATCH",
+                        url=f"{url}")
 
                 ],
                 [       
-                    InlineKeyboardButton(text="CLOSE", callback_data='cls')
+                    InlineKeyboardButton(
+                        text="CLOSE",
+                        callback_data='cls')
 
                 ]                             
             ]
