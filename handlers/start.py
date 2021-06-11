@@ -80,7 +80,7 @@ async def start(client: Client, message: Message):
     )
 
 @Client.on_message(
-    filters.command("info")
+    filters.command("help")
     & filters.private
     & ~ filters.edited
 )
