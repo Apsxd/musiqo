@@ -119,7 +119,7 @@ async def progress(current, total, message, start, type_of_ps, file_name=None):
         time_to_completion = round((total - current) / speed) * 1000
         estimated_total_time = elapsed_time + time_to_completion
         progress_str = "{0}{1} {2}%\n".format(
-            "".join(["🔴" for i in range(math.floor(percentage / 10))]),
+            "".join(["✅" for i in range(math.floor(percentage / 10))]),
             "".join(["🔘" for i in range(10 - math.floor(percentage / 10))]),
             round(percentage, 2),
         )
@@ -252,10 +252,10 @@ def time_to_seconds(time):
 async def jssong(_, message):
     global is_downloading
     if len(message.command) < 2:
-        await message.reply_text("/saavn RᴇQᴜɪʀᴇꜱ Aɴ Aʀɢᴜᴍᴇɴᴛ.")
+        await message.reply_text("/saavn requires an argument.")
         return
     if is_downloading:
-        await message.reply_text("Aɴᴏᴛʜᴇʀ Dᴏᴡɴʟᴏᴀᴅ Iꜱ Iɴ Pʀᴏɢʀᴇꜱꜱ, Tʀʏ Aɢᴀɪɴ Aꜰᴛᴇʀ Sᴏᴍᴇᴛɪᴍᴇ.")
+        await message.reply_text("another download in process try after that.")
         return
     is_downloading = True
     text = message.text.split(None, 1)[1]
