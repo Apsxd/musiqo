@@ -288,10 +288,10 @@ async def jssong(_, message):
 async def deezsong(_, message):
     global is_downloading
     if len(message.command) < 2:
-        await message.reply_text("/deezer RᴇQᴜɪʀᴇꜱ Aɴ Aʀɢᴜᴍᴇɴᴛ.")
+        await message.reply_text("/deezer Requires an argument.")
         return
     if is_downloading:
-        await message.reply_text("Aɴᴏᴛʜᴇʀ Dᴏᴡɴʟᴏᴀᴅ Iꜱ Iɴ Pʀᴏɢʀᴇꜱꜱ, Tʀʏ Aɢᴀɪɴ Aꜰᴛᴇʀ Sᴏᴍᴇᴛɪᴍᴇ.")
+        await message.reply_text("Another Download is in progress, Try again later....")
         return
     is_downloading = True
     text = message.text.split(None, 1)[1]
