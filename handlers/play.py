@@ -406,6 +406,7 @@ async def play(_, message: Message):
     lel = await message.reply("finding")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
+
 gt
     try:
         user = await USER.get_me()
