@@ -36,10 +36,10 @@ async def pause(_, message: Message):
     ) or (
             callsmusic.pytgcalls.active_calls[message.chat.id] == 'paused'
     ):
-        await message.reply_text("🤧 Nᴏᴛʜɪɴɢ Iꜱ Pʟᴀʏɪɴɢ!")
+        await message.reply_text("error")
     else:
         callsmusic.pytgcalls.pause_stream(message.chat.id)
-        await message.reply_text("▶️ Pᴀᴜꜱᴇᴅ!")
+        await message.reply_text("Paused")
 
 
 @Client.on_message(command("resume") & other_filters)
@@ -51,10 +51,10 @@ async def resume(_, message: Message):
     ) or (
             callsmusic.pytgcalls.active_calls[message.chat.id] == 'playing'
     ):
-        await message.reply_text("😉 Nᴏᴛʜɪɴɢ Iꜱ Pᴀᴜꜱᴇ!")
+        await message.reply_text("nothing is paused")
     else:
         callsmusic.pytgcalls.resume_stream(message.chat.id)
-        await message.reply_text("⏸ Rᴇꜱᴜᴍᴇᴅ!")
+        await message.reply_text("Resumed")
 
 
 @Client.on_message(command("end") & other_filters)
@@ -62,7 +62,7 @@ async def resume(_, message: Message):
 @authorized_users_only
 async def stop(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("🤧 Nᴏᴛʜɪɴɢ Iꜱ Sᴛʀᴇᴀᴍɪɴɢ!")
+        await message.reply_text("error shows nothing is streaming")
     else:
         try:
             callsmusic.queues.clear(message.chat.id)
@@ -70,7 +70,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(message.chat.id)
-        await message.reply_text("🛠️ Sᴛᴏᴘᴘᴇᴅ Sᴛʀᴇᴀᴍɪɴɢ!")
+        await message.reply_text("stopped streaming")
 
 
 @Client.on_message(command("skip") & other_filters)
@@ -79,7 +79,7 @@ async def stop(_, message: Message):
 async def skip(_, message: Message):
     global que
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("🤧 Nᴏᴛʜɪɴɢ Iꜱ Pʟᴀʏɪɴɢ Tᴏ Sᴋɪᴘ!")
+        await message.reply_text("Error shows nothig is playing")
     else:
         callsmusic.queues.task_done(message.chat.id)
 
@@ -97,7 +97,7 @@ async def skip(_, message: Message):
         skip = qeue.pop(0)
     if not qeue:
         return
-    await message.reply_text(f'- Sᴋɪᴘᴘᴇᴅ **{skip[0]}**\n- Nᴏᴡ Pʟᴀʏɪɴɢ **{qeue[0][0]}**')
+    await message.reply_text(f'- **Skipped** {skip[0]} \n- **Now playing** {qeue[0][0]}')
 
 
 @Client.on_message(
@@ -106,4 +106,4 @@ async def skip(_, message: Message):
 @errors
 async def admincache(client, message: Message):
     set(message.chat.id, [member.user for member in await message.chat.get_members(filter="administrators")])
-    #await message.reply_text("🌿Tᴄ Pʟᴀʏᴇʀ🌿=🌀 Aᴅᴍɪɴ Cᴀᴄʜᴇ Rᴇꜰʀᴇꜱʜᴇᴅ!")
+    #await message.reply_text("Admin cache refreshed ✅")
