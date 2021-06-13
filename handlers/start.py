@@ -61,18 +61,18 @@ async def start(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "CHANNEL", url="https://t.me/Tubots"
+                        "SUPPORT", url="https://t.me/Tubots"
                     ),
                     InlineKeyboardButton(
-                        "GROUP", url="https://t.me/Unitedbotsupport"
+                        "REPORT BUGS", url="https://t.me/Unitedbotsupport"
                     )
                 ],    
                 [    
                     InlineKeyboardButton(
-                        "YES", switch_inline_query_current_chat=""
+                        "YT SEARCH", switch_inline_query_current_chat=""
                     ),
                     InlineKeyboardButton(
-                        "NO", callback_data="close"
+                        "CLOSE", callback_data="close"
                     )
                 ]
             ]
@@ -87,9 +87,7 @@ async def start(client: Client, message: Message):
 async def help(client: Client, message: Message):
     await message.reply_text(
         f"""<b>Hi {message.from_user.first_name}!
-Join our group for reporting issues and bugs check commands [click here](https://telegra.ph/𝚖𝚞𝚜𝚒𝚚𝚘-Sᴏɴɢ-06-09)
-
-use @missblissrobot for downloading songs
+Join our group for reporting issues and bugs check commands [click here](https://telegra.ph/𝚖𝚞𝚜𝚒𝚚𝚘-Sᴏɴɢ-06-09) use @missblissrobot for downloading songs
  </b>""",
         reply_markup=InlineKeyboardMarkup(
             [
