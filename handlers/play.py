@@ -1,3 +1,7 @@
+# © Lᴜᴄɪᴅᴏ™
+# this code was taken from other bot and rewrote in our on idea
+# dont touch this file
+
 from os import path
 from typing import Dict
 from pyrogram import Client
