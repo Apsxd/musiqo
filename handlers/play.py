@@ -136,7 +136,7 @@ async def playlist(client, message):
         temp.append(t)
     now_playing = temp[0][0]
     by = temp[0][1].mention(style='md')
-    msg = "**Nᴏᴡ Pʟᴀʏɪɴɢ** in {}".format(message.chat.title)
+    msg = "Now playing in {}".format(message.chat.title)
     msg += "\n- "+ now_playing
     msg += "\n- RᴇQ Bʏ "+by
     temp.pop(0)
@@ -147,7 +147,7 @@ async def playlist(client, message):
             name = song[0]
             usr = song[1].mention(style='md')
             msg += f'\n- {name}'
-            msg += f'\n- RᴇQ Bʏ {usr}\n'
+            msg += f'\n- Requested by {usr}\n'
     await message.reply_text(msg)       
     
 # ============================= Settings =========================================
@@ -248,12 +248,12 @@ async def p_cb(b, cb):
         temp.pop(0)
         if temp:
              msg += '\n\n'
-             msg += '**Qᴜᴇᴜᴇ**'
+             msg += 'playlist'
              for song in temp:
                  name = song[0]
                  usr = song[1].mention(style='md')
                  msg += f'\n- {name}'
-                 msg += f'\n- RᴇQ Bʏ {usr}\n'
+                 msg += f'\n- Requested by {usr}\n'
         await cb.message.edit(msg)      
 
 @Client.on_callback_query(filters.regex(pattern=r'^(play|pause|skip|leave|puse|resume|menu|cls)$'))
@@ -308,12 +308,12 @@ async def m_cb(b, cb):
         temp.pop(0)
         if temp:
              msg += '\n\n'
-             msg += '**Qᴜᴇᴜᴇ**'
+             msg += 'playlist'
              for song in temp:
                  name = song[0]
                  usr = song[1].mention(style='md')
                  msg += f'\n- {name}'
-                 msg += f'\n- RᴇQ Bʏ {usr}\n'
+                 msg += f'\n- Requested by {usr}\n'
         await cb.message.edit(msg)      
                       
     elif type_ == 'Resume':     
@@ -341,7 +341,7 @@ async def m_cb(b, cb):
         await cb.answer('Closed menu')
         await cb.message.delete()       
 
-    elif type_ == 'menu':  
+    elif type_ == 'MENU':  
         stats = updated_stats(cb.message.chat, qeue)  
         await cb.answer('Menu opened')
         marr = InlineKeyboardMarkup(
@@ -402,7 +402,7 @@ async def play(_, message: Message):
     lel = await message.reply("finding")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
-
+gt
     try:
         user = await USER.get_me()
     except:
@@ -484,19 +484,13 @@ async def play(_, message: Message):
             [   
                 [
                                
-                    InlineKeyboardButton('PLAYLIST', callback_data='playlist'),
-                    InlineKeyboardButton('MENU', callback_data='menu')
-                
-                ],                     
-                [
-                    InlineKeyboardButton(
-                        text="WATCH",
-                        url=f"{url}")
+                    InlineKeyboardButton('STREAMING PLAYLIST', callback_data='playlist'),
+                    InlineKeyboardButton('CHAT SETTINGS', callback_data='menu')
 
                 ],
                 [       
                     InlineKeyboardButton(
-                        text="CLOSE",
+                        text="CLOSE MENU",
                         callback_data='cls')
 
                 ]                             
