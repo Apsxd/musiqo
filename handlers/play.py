@@ -172,7 +172,7 @@ def updated_stats(chat, queue, vol=100):
 
 def r_ply(type_):
     if type_ == 'play':
-        ico = 'PlAY'
+        ico = 'PLAY'
     else:
         ico = 'PLAY'
     mar = InlineKeyboardMarkup(
@@ -489,19 +489,19 @@ gt
             [   
                 [
                                
-                    InlineKeyboardButton('STREAMING PLAYLIST', callback_data='playlist'),
-                    InlineKeyboardButton('CHAT SETTINGS', callback_data='menu')
+                    InlineKeyboardButton('playlist', callback_data='playlist'),
+                    InlineKeyboardButton('menu', callback_data='menu')
 ],
                 ],                     
                 [
                     InlineKeyboardButton(
-                        text="PLAY ON YOUTUBE",
+                        text="play on youtube",
                         url=f"{url}")
 
                 ],
                 [       
                     InlineKeyboardButton(
-                        text="CLOSE MENU",
+                        text="close",
                         callback_data='cls')
 
                 ]                             
@@ -815,3 +815,5 @@ async def jiosaavn(client: Client, message_: Message):
     os.remove("final.png")
 
 # Have u read all. If read RESPECT :-)
+
+
