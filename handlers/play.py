@@ -491,6 +491,12 @@ gt
                                
                     InlineKeyboardButton('STREAMING PLAYLIST', callback_data='playlist'),
                     InlineKeyboardButton('CHAT SETTINGS', callback_data='menu')
+],
+                ],                     
+                [
+                    InlineKeyboardButton(
+                        text="PLAY ON YOUTUBE",
+                        url=f"{url}")
 
                 ],
                 [       
