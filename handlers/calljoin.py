@@ -33,8 +33,8 @@ async def addchannel(client, message):
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>Flood wait time out {user.first_name} try adding @MusicAssistant_1 manually if cant.contact @tubots."
-            "<b>Try adding @MusicAssistant_1 manually</b>",
+            f"<b>Flood wait time out {user.first_name} try adding @musiqo_Assistant manually if cant.contact @tubots."
+            "<b>Try adding @musiqo_Assistant manually</b>",
         )
         return
     await message.reply_text(
