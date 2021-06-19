@@ -403,7 +403,7 @@ async def m_cb(b, cb):
 @Client.on_message(command("play") & other_filters)
 async def play(_, message: Message):
     global que
-    lel = await message.reply("playing")
+    lel = await message.reply("Finding 🔍")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -453,7 +453,7 @@ async def play(_, message: Message):
         return     
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
-    await lel.edit("getting")
+    await lel.edit("downloading...")
     sender_id = message.from_user.id
     user_id = message.from_user.id
     sender_name = message.from_user.first_name
@@ -464,7 +464,7 @@ async def play(_, message: Message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    await lel.edit("downloading")
+    await lel.edit("streaming..")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -597,7 +597,7 @@ async def deezer(client: Client, message_: Message):
         #lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i>takes like @LovishMusic_bot ot in this chat send /play to join or add assistant manually or contact support @PsychoBots_chat</i>"
+            f"<i>takes like @musiqo_Assistant ot in this chat send /play to join or add assistant manually or contact support @PsychoBots_chat</i>"
         )
         return                            
     requested_by = message_.from_user.first_name   
@@ -727,7 +727,7 @@ async def jiosaavn(client: Client, message_: Message):
         #lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            "<i> @LovishMusic_bot not in group.</i>"
+            "<i> @musiqo_Assistant not in group.</i>"
         )
         return     
     requested_by = message_.from_user.first_name
