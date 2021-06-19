@@ -11,13 +11,13 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
     & ~ filters.edited
 )
 async def start_(client: Client, message: Message):
-    await message.reply_sticker("CAACAgIAAxkBAAFDgbdgvwiTHFC9NSVmiePow70hexmH5QACsgADL0ojB_9n4AABYBHysh8E")
+    await message.reply_sticker("CAACAgUAAxkBAAFEGoVgzcPQN785PMrDkvG-wBYHw4CEbQACigMAAsvqcFZtF3TaVwlYIR8E")
     await message.reply_text(
         f"""<b>[💌](https://telegra.ph/file/f6fad124b1ffd3cf8eefb.png) Welcome {message.from_user.first_name}!
 **musiqo** is a bot designed for **stream** on your group, as **simple** as possible, through the **voice chats** in your group.
 
 **❓How to use it?**
-Press the » "*COMMANDS** to view the full list of the commands of the bot!
+Press the » **COMMANDS** to view the full list of the commands of the bot!
 and read /help to know about this bot
 <\b>""",
       
@@ -42,7 +42,7 @@ and read /help to know about this bot
                 ],
                 [
                     InlineKeyboardButton(
-                        "ADD TO GROUPS", url="https://t.me/BlissMusicRobot?startgroup=true"
+                        "ADD TO GROUPS", url="https://t.me/Musiqorobot?startgroup=true"
                     ) 
                 ]
             ]
