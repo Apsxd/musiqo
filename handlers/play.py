@@ -440,7 +440,7 @@ async def play(_, message: Message):
                               #print(e)
                               await lel.edit(
                                   f"<b>Flood wait timeout \nUser {user.first_name} flooding request userbot cant join group, check @LovishMusic_bot banned here or contact support @tubots"
-                                  "<b>dev says  add @LovishMusic_bot and try again</b>",
+                                  "<b>dev says  add @musiqo_Assistant and try again</b>",
                               )
                               pass
     try:
