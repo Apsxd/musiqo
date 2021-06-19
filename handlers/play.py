@@ -136,9 +136,9 @@ async def playlist(client, message):
         temp.append(t)
     now_playing = temp[0][0]
     by = temp[0][1].mention(style='md')
-    msg = "**Nᴏᴡ Pʟᴀʏɪɴɢ** in {}".format(message.chat.title)
+    msg = "**Now playing** in {}".format(message.chat.title)
     msg += "\n- "+ now_playing
-    msg += "\n- RᴇQ Bʏ "+by
+    msg += "\n- Requested by "+by
     temp.pop(0)
     if temp:
         msg += '\n\n'
@@ -147,7 +147,7 @@ async def playlist(client, message):
             name = song[0]
             usr = song[1].mention(style='md')
             msg += f'\n- {name}'
-            msg += f'\n- RᴇQ Bʏ {usr}\n'
+            msg += f'\n- Requested by {usr}\n'
     await message.reply_text(msg)       
     
 # ============================= Settings =========================================
@@ -159,9 +159,9 @@ def updated_stats(chat, queue, vol=100):
         if len(que) > 0:
             stats += '\n\n'
             stats += 'Volume : {}%\n'.format(vol)
-            stats += 'Songs in queue : `{}`\n'.format(len(que))
-            stats += 'Now Playing : **{}**\n'.format(queue[0][0])
-            stats += 'Requested by : {}'.format(queue[0][1].mention)
+            stats += 'Songs in playlist : `{}`\n'.format(len(que))
+            stats += 'now playing : **{}**\n'.format(queue[0][0])
+            stats += 'requested by : {}'.format(queue[0][1].mention)
     else:
         stats = None
     return stats
@@ -174,10 +174,10 @@ def r_ply(type_):
     mar = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton('LEAVE', 'Leave'),
-                InlineKeyboardButton('PAUSE', 'Pause'),
-                InlineKeyboardButton('RESUME', 'Resume'),
-                InlineKeyboardButton('SKIP', 'Skip')
+                InlineKeyboardButton('LEA', 'Leave'),
+                InlineKeyboardButton('PAU', 'Pause'),
+                InlineKeyboardButton('RES', 'Resume'),
+                InlineKeyboardButton('SKI', 'Skip')
                 
             ],
             [
@@ -244,7 +244,7 @@ async def p_cb(b, cb):
         by = temp[0][1].mention(style='md')
         msg = "Now playing in {}".format(cb.message.chat.title)
         msg += "\n- "+ now_playing
-        msg += "\n- RᴇQ Bʏ "+by
+        msg += "\n- requested "+by
         temp.pop(0)
         if temp:
              msg += '\n\n'
@@ -253,7 +253,7 @@ async def p_cb(b, cb):
                  name = song[0]
                  usr = song[1].mention(style='md')
                  msg += f'\n- {name}'
-                 msg += f'\n- RᴇQ Bʏ {usr}\n'
+                 msg += f'\n- requested by {usr}\n'
         await cb.message.edit(msg)      
 
 @Client.on_callback_query(filters.regex(pattern=r'^(play|pause|skip|leave|puse|resume|menu|cls)$'))
@@ -431,7 +431,7 @@ async def play(_, message: Message):
                               await USER.join_chat(invitelink)
                               await USER.send_message(message.chat.id,"Userbot have joined the group")
                               await lel.edit(
-                                  "<b>@LovishMusic_bot has joined the chat</b>",
+                                  "<b>@musiqo_Assistant has joined the chat</b>",
                               )
 
                           except UserAlreadyParticipant:
@@ -448,7 +448,7 @@ async def play(_, message: Message):
         #lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i> @LovishMusic_bot assistant is not in the chat, ask admin to send /play command for add assistant manually.</i>"
+            f"<i> @musiqo_Assistant assistant is not in the chat, ask admin to send /play command for add assistant manually.</i>"
         )
         return     
     sender_id = message.from_user.id
@@ -489,12 +489,13 @@ async def play(_, message: Message):
                 [
                                
                     InlineKeyboardButton('Playlist', callback_data='playlist'),
+                    InlineKeyboardButton('Menu', callback_data='menu')
    
                 
                 ],                     
                 [
                     InlineKeyboardButton(
-                        text="YT link",
+                        text="youtube",
                         url=f"{url}")
 
                 ],
@@ -558,7 +559,7 @@ async def deezer(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "lovish"
+        user.first_name =  "musiqo_Assistant"
     usar = user
     wew = usar.id
     try:
@@ -579,7 +580,7 @@ async def deezer(client: Client, message_: Message):
                               await USER.join_chat(invitelink)
                               await USER.send_message(message_.chat.id,"I Jᴏɪɴᴇᴅ Tʜɪꜱ Gʀᴏᴜᴘ Fᴏʀ Pʟᴀʏɪɴɢ Mᴜꜱɪᴄ Iɴ VC")
                               await lel.edit(
-                                  "<b>@LovishMusic_bot has joined chat</b>",
+                                  "<b>@musiqo_Assistant has joined chat</b>",
                               )
 
                           except UserAlreadyParticipant:
@@ -588,7 +589,7 @@ async def deezer(client: Client, message_: Message):
                               #print(e)
                               await lel.edit(
                                   f"<b>Flood wait timeout \nUser {user.first_name} could'nt join group Make sure assistant is not banned in this chat."
-                                  "\n\n@LovishMusic_bot Userbot is not in this chat.</b>",
+                                  "\n\n @musiqo_Assistant Userbot is not in this chat.</b>",
                               )
                               pass
     try:
@@ -688,7 +689,7 @@ async def jiosaavn(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "Lovish"
+        user.first_name =  "musiqo_Assistant"
     usar = user
     wew = usar.id
     try:
@@ -701,7 +702,7 @@ async def jiosaavn(client: Client, message_: Message):
                               invitelink = await client.export_chat_invite_link(chid)
                           except:
                               await lel.edit(
-                                  "<b>Aᴅᴅ Mᴇ Aꜱ Aᴅᴍɪɴ Oꜰ Yᴏᴜʀ Gʀᴏᴜᴘ Fɪʀꜱᴛ</b>",
+                                  "<b>add me as admin</b>",
                               )
                               return
 
@@ -709,7 +710,7 @@ async def jiosaavn(client: Client, message_: Message):
                               await USER.join_chat(invitelink)
                               await USER.send_message(message_.chat.id,"I joined this group for playing music")
                               await lel.edit(
-                                  "<b>@LovishMusic_bot Assistant joined your chat</b>",
+                                  "<b>@musiqo_Assistant Assistant joined your chat</b>",
                               )
 
                           except UserAlreadyParticipant:
@@ -718,7 +719,7 @@ async def jiosaavn(client: Client, message_: Message):
                               #print(e)
                               await lel.edit(
                                   f"<b>Flood wait timeout \nUser {user.first_name} cant join this group add @LovishMusic_bot manually if cant contact support."
-                                  "<b>Add @LovishMusic_bot nd retry</b>",
+                                  "<b>Add @musiqo_Assistant nd retry</b>",
                               )
                               pass
     try:
@@ -762,7 +763,7 @@ async def jiosaavn(client: Client, message_: Message):
              [
                InlineKeyboardButton(
                    text="Join support",
-                   url='https://t.me/PsychoBots_Chat')
+                   url='https://t.me/unitedbotsupport')
              ],
              [       
                InlineKeyboardButton(
