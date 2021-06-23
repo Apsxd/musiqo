@@ -11,7 +11,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
     & ~ filters.edited
 )
 async def start_(client: Client, message: Message):
-    await message.reply_sticker("CAACAgUAAxkBAAFEGoVgzcPQN785PMrDkvG-wBYHw4CEbQACigMAAsvqcFZtF3TaVwlYIR8E")
+    await message.reply_image("https://telegra.ph/file/f6fad124b1ffd3cf8eefb.png")
     await message.reply_text(
         f"""<b>[💌](https://telegra.ph/file/f6fad124b1ffd3cf8eefb.png) Welcome {message.from_user.first_name}!
 **musiqo** is a bot designed for **stream** on your group, as **simple** as possible, through the **voice chats** in your group.
