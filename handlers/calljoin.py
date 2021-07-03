@@ -38,7 +38,7 @@ async def addchannel(client, message):
         )
         return
     await message.reply_text(
-            "<b>@MusicAssistant_1 joined </b>",
+            "<b>@Musiqo_Assistant joined </b>",
         )
     
 @USER.on_message(filters.group & filters.command(["userbotleave"]))
