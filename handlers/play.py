@@ -5,7 +5,6 @@ from typing import Dict
 from pyrogram import Client
 from pyrogram.types import Message, Voice
 from typing import Callable, Coroutine, Dict, List, Tuple, Union
-from callsmusic import callsmusic, queues
 from helpers.admins import get_administrators
 from os import path
 import requests
@@ -19,7 +18,6 @@ from pyrogram.errors.exceptions.flood_420 import FloodWait
 import traceback
 import os
 import sys
-from callsmusic.callsmusic import client as USER
 from pyrogram.errors import UserAlreadyParticipant
 import converter
 from downloaders import youtube
