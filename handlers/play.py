@@ -22,7 +22,7 @@ import sys
 from callsmusic.callsmusic import client as USER
 from pyrogram.errors import UserAlreadyParticipant
 import converter
-from downloaders import youtube
+from unitedbots import stream
 
 from config import BOT_NAME as bn, DURATION_LIMIT
 from helpers.filters import command, other_filters
@@ -30,7 +30,7 @@ from helpers.decorators import errors, authorized_users_only
 from helpers.errors import DurationLimitError
 from helpers.gets import get_url, get_file_name
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from admin.admins import admins as a
+from MusiqoRobot.musiqo import admins as a
 import os
 import aiohttp
 import aiofiles
