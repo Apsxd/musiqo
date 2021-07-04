@@ -1,5 +1,4 @@
 from asyncio.queues import QueueEmpty
-from admin.admins import set
 from pyrogram import Client
 from pyrogram.types import Message
 from callsmusic import callsmusic
