@@ -12,7 +12,7 @@ from pyrogram import filters, emoji
 from config import BOT_NAME as BN
 from helpers.filters import command, other_filters
 from helpers.decorators import errors, authorized_users_only
-from config import que, musiqo as a
+from config import que, admins as a
 
 @Client.on_message(filters.command('adminreset'))
 async def update_admin(client, message):
