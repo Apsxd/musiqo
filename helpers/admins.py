@@ -18,5 +18,5 @@ async def get_administrators(chat: Chat) -> List[User]:
             #if administrator.can_manage_voice_chats:
             to_set.append(administrator.user.id)
 
-        admin.admins.set(chat.id, to_set)
+        MusiqoRobot.musiqo.set(chat.id, to_set)
         return await get_administrators(chat)
