@@ -15,9 +15,9 @@ async def start_(client: Client, message: Message):
         f"""<b>[💌](https://telegra.ph/file/f6fad124b1ffd3cf8eefb.png) Welcome {message.from_user.first_name}!
 **musiqo** is a bot designed for **stream** on your group, as **simple** as possible, through the **voice chats** in your group.
 
-**❓How to use it?**
+**❓How to use it❓**
 Press the » **COMMANDS** to view the full list of the commands of the bot!
-and read /help to know about this bot
+and Join [support](https://t.me/unitedbotsupport) to know about this bot
 <\b>""",
       
        
@@ -55,7 +55,7 @@ and read /help to know about this bot
 )
 async def start(client: Client, message: Message):
     await message.reply_text(
-        "Do you want to search for a YouTube video?",
+        "Know how to use",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -67,9 +67,6 @@ async def start(client: Client, message: Message):
                     )
                 ],    
                 [    
-                    InlineKeyboardButton(
-                        "YT SEARCH", switch_inline_query_current_chat=""
-                    ),
                     InlineKeyboardButton(
                         "CLOSE", callback_data="close"
                     )
@@ -83,7 +80,7 @@ async def start(client: Client, message: Message):
     & filters.private
     & ~ filters.edited
 )
-async def help_(client: Client, message: Message):
+async def help(client: Client, message: Message):
     await message.reply_text(
         f"""<b>Hi {message.from_user.first_name}!
 Join our group for reporting issues and bugs check commands [click here](https://telegra.ph/𝚖𝚞𝚜𝚒𝚚𝚘-Sᴏɴɢ-06-09) use @missblissrobot for downloading songs
