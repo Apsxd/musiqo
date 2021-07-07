@@ -405,14 +405,14 @@ async def m_cb(b, cb):
 @Client.on_message(command("play") & other_filters)
 async def play(_, message: Message):
     global que
-    lel = await message.reply("Finding 🔍")
+    lel = await message.reply("Finding..")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "lovish"
+        user.first_name =  "myr"
     usar = user
     wew = usar.id
     try:
@@ -580,7 +580,7 @@ async def deezer(client: Client, message_: Message):
 
                           try:
                               await USER.join_chat(invitelink)
-                              await USER.send_message(message_.chat.id,"I Jᴏɪɴᴇᴅ Tʜɪꜱ Gʀᴏᴜᴘ Fᴏʀ Pʟᴀʏɪɴɢ Mᴜꜱɪᴄ Iɴ VC")
+                              await USER.send_message(message_.chat.id,"joined for playing music in vc")
                               await lel.edit(
                                   "<b>@musiqo_Assistant has joined chat</b>",
                               )
@@ -800,7 +800,7 @@ async def jiosaavn(client: Client, message_: Message):
         qeue = que.get(message_.chat.id)
         s_name = sname
         r_by = message_.from_user
-        loc = file_path
+        loc = file_path no
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
         callsmusic.pytgcalls.join_group_call(message_.chat.id, file_path)
