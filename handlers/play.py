@@ -152,7 +152,15 @@ async def playlist(client, message):
             msg += f'\n- Requested by {usr}\n'
     await message.reply_text(msg)       
     
-# ============================= Settings =========================================
+
+
+
+#SETTINGS---------------- read before editing 
+
+
+
+
+
 
 def updated_stats(chat, queue, vol=100):
     if chat.id in callsmusic.pytgcalls.active_calls:
@@ -170,16 +178,16 @@ def updated_stats(chat, queue, vol=100):
 
 def r_ply(type_):
     if type_ == 'play':
-        ico = 'PlAY'
+        ico = 'play'
     else:
         ico = 'PLAY'
     mar = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton('LEA', 'Leave'),
-                InlineKeyboardButton('PAU', 'Pause'),
-                InlineKeyboardButton('RES', 'Resume'),
-                InlineKeyboardButton('SKI', 'Skip')
+                InlineKeyboardButton('⏺️', 'Leave'),
+                InlineKeyboardButton('⏸️', 'Pause'),
+                InlineKeyboardButton('▶️', 'Resume'),
+                InlineKeyboardButton('⏩', 'Skip')
                 
             ],
             [
@@ -250,7 +258,7 @@ async def p_cb(b, cb):
         temp.pop(0)
         if temp:
              msg += '\n\n'
-             msg += '**Qᴜᴇᴜᴇ**'
+             msg += 'queue'
              for song in temp:
                  name = song[0]
                  usr = song[1].mention(style='md')
@@ -493,12 +501,6 @@ async def play(_, message: Message):
                     InlineKeyboardButton('Playlist', callback_data='playlist'),
                     InlineKeyboardButton('Menu', callback_data='menu')
    
-                
-                ],                     
-                [
-                    InlineKeyboardButton(
-                        text="youtube",
-                        url=f"{url}")
 
                 ],
                 [       
@@ -549,3 +551,4 @@ async def play(_, message: Message):
 
 
 #end
+#Respect for kanging 🌝🌚
