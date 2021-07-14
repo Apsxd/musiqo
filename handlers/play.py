@@ -191,11 +191,11 @@ def r_ply(type_):
                 
             ],
             [
-                InlineKeyboardButton('Playlist', 'playlist'),
+                InlineKeyboardButton('Playlist🔻', 'playlist'),
                 
             ],
             [       
-                InlineKeyboardButton("Close",'cls')
+                InlineKeyboardButton("Close Menu",'cls')
             ]        
         ]
     )
@@ -352,23 +352,23 @@ async def m_cb(b, cb):
         await cb.message.delete()
         stats = updated_stats(cb.message.chat, qeue) 
         marr = InlineKeyboardMarkup(
-
+               [
                 [
-
-                    InlineKeyboardButton('Playlist', 'playlist'),
-
+                    InlineKeyboardButton('⏹', 'Leave'),
+                    InlineKeyboardButton('⏸', 'Pause'),
+                    InlineKeyboardButton('▶️', 'Resume'),
+                    InlineKeyboardButton('⏩', 'Skip')
                 
-
                 ],
-
+                [
+                    InlineKeyboardButton('Playlist🔻', 'playlist'),
+                
+                ],
                 [       
-
-                    InlineKeyboardButton("Close",'cls')
-
+                    InlineKeyboardButton("Close Menu",'cls')
                 ]        
-
-            )
-
+            ]
+        )
         
 
    
