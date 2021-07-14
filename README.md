@@ -21,5 +21,6 @@ Telegram voice chat robot
 
 <a href="https://replit.com/@basimon/GMusiqopyrostring"><img src="https://img.shields.io/badge/Run-Repl.it-white?style=for-the-badge&logo=repl.it"></a>
 
+#demoBot
 
-[license](https://github.com/LucidoXD/musiqo/blob/main/LICENSE)
+ [𝚖𝚞𝚜𝚒𝚚𝚘 <\Sᴏɴɢ>](https://t.me/Musiqorobot)
