@@ -30,18 +30,18 @@ and Join [support](https://t.me/unitedbotsupport) to know about this bot
                 ],
                 [
                     InlineKeyboardButton(
-                        "GROUP", url="https://t.me/unitedbotsupport"
+                        "Support Group", url="https://t.me/unitedbotsupport"
                     ),
                     InlineKeyboardButton(
-                        "CHANNEL", url="https://t.me/Tubots"
+                        "Updates Channel", url="https://t.me/Tubots"
                     ),
                     InlineKeyboardButton(
-                        "CREDITS", url="https://t.me/Psycho_Bots"
+                        "Credits", url="https://t.me/Psycho_Bots"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "ADD TO GROUPS", url="https://t.me/Musiqorobot?startgroup=true"
+                        "Add to your group", url="https://t.me/Musiqorobot?startgroup=true"
                     ) 
                 ]
             ]
@@ -60,15 +60,15 @@ async def start(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "SUPPORT", url="https://t.me/Tubots"
+                        "Support", url="https://t.me/Tubots"
                     ),
                     InlineKeyboardButton(
-                        "REPORT BUGS", url="https://t.me/Unitedbotsupport"
+                        "Report bugs", url="https://t.me/Unitedbotsupport"
                     )
                 ],    
                 [    
                     InlineKeyboardButton(
-                        "CLOSE", callback_data="close"
+                        "Close", callback_data="close"
                     )
                 ]
             ]
@@ -83,16 +83,16 @@ async def start(client: Client, message: Message):
 async def source(client: Client, message: Message):
     await message.reply_text(
         f"""<b>Hi {message.from_user.first_name}!
-**here is the help menu**
+**Here is bot source code and pyrostring generator For help contact at support group**
  </b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "SOURCE CODE", url="https://github.com/LucidoXD/musiqo"
+                        "github repo", url="https://github.com/LucidoXD"
                     ),
                     InlineKeyboardButton(
-                        "WEBSITE", url="https://cutt.ly/GjBGQ0D"
+                        "string generator", url="https://replit.com/@basimon/GMusiqopyrostring"
                     )
                 ]
             ]
