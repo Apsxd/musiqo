@@ -310,7 +310,7 @@ def r_ply(type_):
 
     else:
 
-        ico = 'PLAY'
+        ico = 'play'
 
     mar = InlineKeyboardMarkup(
 
@@ -908,7 +908,7 @@ async def play(_, message: Message):
 
                     InlineKeyboardButton('Playlist', callback_data='playlist'),
 
-                    InlineKeyboardButton('Menu', callback_data='menu')
+                    InlineKeyboardButton('Settings', callback_data='menu')
 
    
 
@@ -918,7 +918,7 @@ async def play(_, message: Message):
 
                     InlineKeyboardButton(
 
-                        text="Close",
+                        text="Close menu",
 
                         callback_data='cls')
 
