@@ -908,7 +908,7 @@ async def play(_, message: Message):
 
                     InlineKeyboardButton('Playlist', callback_data='playlist'),
 
-                    InlineKeyboardButton('Settings', callback_data='menu')
+                    InlineKeyboardButton('Spt', url='https/t.me/unitedbotsupport')
 
    
 
