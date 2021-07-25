@@ -66,12 +66,6 @@ import aiofiles
 
 import ffmpeg
 
-from PIL import Image
-
-from PIL import ImageFont
-
-from PIL import ImageDraw
-
 from config import que
 
 from Python_ARQ import ARQ
