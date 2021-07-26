@@ -274,37 +274,21 @@ def r_ply(type_):
     mar = InlineKeyboardMarkup(
 
         [
-
             [
-
                 InlineKeyboardButton('⏺️', 'Leave'),
-
                 InlineKeyboardButton('⏸️', 'Pause'),
-
                 InlineKeyboardButton('▶️', 'Resume'),
-
-                InlineKeyboardButton('⏩', 'Skip')
-
-                
-
+                InlineKeyboardButton('⏩', 'Skip')            
             ],
 
             [
-
-                InlineKeyboardButton('Playlist🔻', 'playlist'),
-
-                
-
+                InlineKeyboardButton('Playlist', 'playlist')
             ],
 
             [       
-
                 InlineKeyboardButton("Close Menu",'cls')
-
             ]        
-
         ]
-
     )
 
     return mar
@@ -860,31 +844,20 @@ async def play(_, message: Message):
     keyboard = InlineKeyboardMarkup(
 
             [   
-
-                [
+               [
 
                                
 
                     InlineKeyboardButton('Playlist', callback_data='playlist'),
-
                     InlineKeyboardButton('Settings', callback_data='menu')
-
-   
-
                 ],
-
                 [       
 
                     InlineKeyboardButton(
-
-                        text="Close menu",
-
+                       text="Close menu",
                         callback_data='cls')
-
                 ]                             
-
             ]
-
         )
 
     requested_by = message.from_user.first_name
