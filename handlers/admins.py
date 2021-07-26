@@ -1,3 +1,4 @@
+#callsmusic
 from asyncio.queues import QueueEmpty
 from MusiqoRobot.musiqo import set
 from pyrogram import Client
