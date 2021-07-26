@@ -1,85 +1,44 @@
 from os import path
-
 from typing import Dict
-
 from pyrogram import Client
-
 from pyrogram.types import Message, Voice
-
 from typing import Callable, Coroutine, Dict, List, Tuple, Union
-
 from callsmusic import callsmusic, queues
-
 from helpers.admins import get_administrators
-
 from os import path
-
 import requests
-
 import aiohttp
-
 import youtube_dl
-
 from youtube_search import YoutubeSearch
-
 from pyrogram import filters, emoji
-
 from pyrogram.types import InputMediaPhoto
-
 from pyrogram.errors.exceptions.bad_request_400 import ChatAdminRequired
-
 from pyrogram.errors.exceptions.flood_420 import FloodWait
-
 import traceback
-
 import os
-
 import sys
-
 from callsmusic.callsmusic import client as USER
-
 from pyrogram.errors import UserAlreadyParticipant
-
 import converter
-
 from downloader import youtube
-
 from config import BOT_NAME as bn, DURATION_LIMIT
-
 from helpers.filters import command, other_filters
-
 from helpers.decorators import errors, authorized_users_only
-
 from helpers.errors import DurationLimitError
-
 from helpers.gets import get_url, get_file_name
-
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-
 from MusiqoRobot.musiqo import admins as a
-
 import os
-
 import aiohttp
-
 import aiofiles
-
 import ffmpeg
-
 from PIL import Image
-
 from PIL import ImageFont
-
 from PIL import ImageDraw
-
 from config import que
-
 from Python_ARQ import ARQ
-
 import json
-
 import wget
-
 chat_id = None
 
            
