@@ -24,5 +24,3 @@ Pyrogram string
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-black.svg)](https://github.com/zyrus-basi/vc_heroku/graphs/commit-activity)
 <p align="center">
 <a href="https://app.codacy.com/manual/zyrus-basi/vc_heroku/dashboard"> <img src="https://img.shields.io/codacy/grade/4d58f2a402b54aed8a7d95f7add45a81?color=brightblue&logo=codacy&logoColor=green&style=for-the-badge" alt="Codacy" /></a>
-
-a href="https://Cloudcluster.com/new/template/LucidoXD/musiqo"><img src="https://user-images.githubusercontent.com/77770753/119371372-fe917900-bcd3-11eb-8db5-f5e8063cdd1c.jpg" width="94" height="28"></a>
