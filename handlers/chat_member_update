@@ -1,3 +1,4 @@
+#callsmusic
 from pyrogram.types import ChatMemberUpdated
 from admin.admins import admins
 from pyrogram import Client
