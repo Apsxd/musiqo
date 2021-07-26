@@ -865,9 +865,9 @@ async def play(_, message: Message):
 
                                
 
-                    InlineKeyboardButton('🔺Playlist', callback_data='playlist'),
+                    InlineKeyboardButton('Playlist', callback_data='playlist'),
 
-                    InlineKeyboardButton('Settings🔻', callback_data='menu')
+                    InlineKeyboardButton('Settings', callback_data='menu')
 
    
 
@@ -877,7 +877,7 @@ async def play(_, message: Message):
 
                     InlineKeyboardButton(
 
-                        text="🔻Close menu🔺",
+                        text="Close menu",
 
                         callback_data='cls')
 
