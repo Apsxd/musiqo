@@ -14,7 +14,7 @@ async def addchannel(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>....</b>",
+            "<b>Joined</b>",
         )
         return
 
@@ -34,7 +34,7 @@ async def addchannel(client, message):
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>Flood wait time out {user.first_name} try adding @musiqo_Assistant manually if cant.contact @tubots."
+            f"<b>Flood wait time out {user.first_name} contact @tubots."
             "<b>Try adding @musiqo_Assistant manually</b>",
         )
         return
@@ -42,7 +42,7 @@ async def addchannel(client, message):
             "<b>@Musiqo_Assistant joined </b>",
         )
     
-@USER.on_message(filters.group & filters.command(["userbotleave"]))
+@USER.on_message(filters.group & filters.command(["leave"]))
 async def rem(USER, message):
     try:
         await USER.leave_chat(message.chat.id)
