@@ -61,13 +61,7 @@ def cb_admin_check(func: Callable) -> Callable:
 
     return decorator                                                                       
 
-                                          
-
-                                          
-
-                                          
-
-                                          
+#transcoder                                                                                
 
 def transcode(filename):
 
@@ -616,15 +610,7 @@ async def m_cb(b, cb):
             ]
 
         )
-
         
-
-   
-
- 
-
-                
-
         await cb.message.edit(stats, reply_markup=marr) 
 
     elif type_ == 'skip':        
@@ -703,7 +689,7 @@ async def play(_, message: Message):
 
     except:
 
-        user.first_name =  "myr"
+        user.first_name =  "musiqo_Assistant"
 
     usar = user
 
