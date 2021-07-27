@@ -21,7 +21,7 @@ async def addchannel(client, message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "BlissMusicRobot"
+        user.first_name =  "musiqo_Assistant"
 
     try:
         await USER.join_chat(invitelink)
