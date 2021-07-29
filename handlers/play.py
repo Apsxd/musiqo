@@ -147,19 +147,19 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
 
     font = ImageFont.truetype("image/font.otf", 32)
 
-    draw.text((205, 550), f"Song Title: {title}", (51, 215, 255), font=font)
+    draw.text((205, 550), f"Song title: {title}", (51, 215, 255), font=font)
 
     draw.text(
 
-        (205, 590), f"Song Duration: {duration}", (255, 255, 255), font=font
+        (205, 590), f"Song duration: {duration}", (255, 255, 255), font=font
 
     )
 
-    draw.text((205, 630), f"Song Views: {views}", (255, 255, 255), font=font)
+    draw.text((205, 630), f"Song views: {views}", (255, 255, 255), font=font)
 
     draw.text((205, 670),
 
-        f"Playinh for: {requested_by}",
+        f"Playing for: {requested_by}",
 
         (255, 255, 255),
 
