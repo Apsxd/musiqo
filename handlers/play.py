@@ -125,9 +125,9 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
 
     image2 = Image.open("image/Musiqo1.png")
 
-    image3 = changeImageSize(1270, ,710, image1)
+    image3 = changeImageSize(1280, 720, image1)
 
-    image4 = changeImageSize(1270, 710, image2)
+    image4 = changeImageSize(1280, 720, image2)
 
     image5 = image3.convert("RGBA")
 
@@ -141,17 +141,17 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
 
     font = ImageFont.truetype("image/font.otf", 32)
 
-    draw.text((250, 600), f"Song title:- {title}", (51, 215, 255), font=font)
+    draw.text((205, 550), f"Song title:- {title}", (51, 215, 255), font=font)
 
     draw.text(
 
-        (210, 560), f"Song duration:- {duration}", (255, 255, 255), font=font
+        (205, 590), f"Song duration:- {duration}", (255, 255, 255), font=font
 
     )
 
-    draw.text((210, 635), f"Song views:- {views}", (255, 255, 255), font=font)
+    draw.text((205, 630), f"Song views:- {views}", (255, 255, 255), font=font)
 
-    draw.text((210, 635),
+    draw.text((205, 670),
 
         f"Playing for:- {requested_by}",
 
@@ -595,7 +595,7 @@ async def m_cb(b, cb):
 
                 [
 
-                    InlineKeyboardButton('Playlist🔻', 'playlist'),
+                    InlineKeyboardButton('Playlist', 'playlist'),
 
                 
 
@@ -689,7 +689,7 @@ async def play(_, message: Message):
 
     except:
 
-        user.first_name =  "musiqo_Assistant"
+        user.first_name =  "Noravc_assistant"
 
     usar = user
 
@@ -743,9 +743,9 @@ async def play(_, message: Message):
 
                               await lel.edit(
 
-                                  f"<b>Flood wait timeout \nUser {user.first_name} flooding request userbot cant join group, check @LovishMusic_bot banned here or contact support @tubots"
+                                  f"<b>Flood wait timeout \nUser {user.first_name} flooding request userbot cant join group, check @Noravc_assistant banned here or contact support"
 
-                                  "<b>dev says  add @musiqo_Assistant and try again</b>",
+                                  "<b>add @Noravc_assistant and try again</b>",
 
                               )
 
@@ -761,7 +761,7 @@ async def play(_, message: Message):
 
         await lel.edit(
 
-            f"<i> @musiqo_Assistant assistant is not in the chat, ask admin to send /play command for add assistant manually.</i>"
+            f"<i>@Noravc_assistant is not in the chat, ask admin to send /play command for add assistant manually.</i>"
 
         )
 
