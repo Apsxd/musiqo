@@ -61,13 +61,7 @@ def cb_admin_check(func: Callable) -> Callable:
 
     return decorator                                                                       
 
-                                          
-
-                                          
-
-                                          
-
-                                          
+#transcoder                                                                                
 
 def transcode(filename):
 
@@ -147,19 +141,19 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
 
     font = ImageFont.truetype("image/font.otf", 32)
 
-    draw.text((205, 550), f"Song title: {title}", (51, 215, 255), font=font)
+    draw.text((205, 550), f"Song title:- {title}", (51, 215, 255), font=font)
 
     draw.text(
 
-        (205, 590), f"Song duration: {duration}", (255, 255, 255), font=font
+        (205, 590), f"Song duration:- {duration}", (255, 255, 255), font=font
 
     )
 
-    draw.text((205, 630), f"Song views: {views}", (255, 255, 255), font=font)
+    draw.text((205, 630), f"Song views:- {views}", (255, 255, 255), font=font)
 
     draw.text((205, 670),
 
-        f"Playing for: {requested_by}",
+        f"Playing for:- {requested_by}",
 
         (255, 255, 255),
 
@@ -551,7 +545,7 @@ async def m_cb(b, cb):
 
             await cb.answer('streaming resumed')     
 
-    elif type_ == 'pause':         
+    elif type_ == 'puse':         
 
         if (
 
@@ -601,7 +595,7 @@ async def m_cb(b, cb):
 
                 [
 
-                    InlineKeyboardButton('Playlist🔻', 'playlist'),
+                    InlineKeyboardButton('Playlist', 'playlist'),
 
                 
 
@@ -616,15 +610,7 @@ async def m_cb(b, cb):
             ]
 
         )
-
         
-
-   
-
- 
-
-                
-
         await cb.message.edit(stats, reply_markup=marr) 
 
     elif type_ == 'skip':        
@@ -757,7 +743,7 @@ async def play(_, message: Message):
 
                               await lel.edit(
 
-                                  f"<b>Flood wait timeout \nUser {user.first_name} flooding request userbot cant join group, check @LovishMusic_bot banned here or contact support @tubots"
+                                  f"<b>Flood wait timeout \nUser {user.first_name} flooding request userbot cant join group, check @Noravc_assistant banned here or contact support"
 
                                   "<b>add @musiqo_Assistant and try again</b>",
 
@@ -775,7 +761,7 @@ async def play(_, message: Message):
 
         await lel.edit(
 
-            f"<i> @musiqo_Assistant assistant is not in the chat, ask admin to send /play command for add assistant manually.</i>"
+            f"<i>@musiqo_Assistant is not in the chat, ask admin to send /play command for add assistant manually.</i>"
 
         )
 
@@ -937,4 +923,4 @@ async def play(_, message: Message):
 #end
 
 #Respect for kanging 🌝🌚
-
+#Belli belli
