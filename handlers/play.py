@@ -761,7 +761,7 @@ async def play(_, message: Message):
 
         await lel.edit(
 
-            f"<i>@Noravc_assistant is not in the chat, ask admin to send /play command for add assistant manually.</i>"
+            f"<i>@musiqo_Assistant is not in the chat, ask admin to send /play command for add assistant manually.</i>"
 
         )
 
