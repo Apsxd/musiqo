@@ -689,7 +689,7 @@ async def play(_, message: Message):
 
     except:
 
-        user.first_name =  "Noravc_assistant"
+        user.first_name =  "musiqo_Assistant"
 
     usar = user
 
@@ -745,7 +745,7 @@ async def play(_, message: Message):
 
                                   f"<b>Flood wait timeout \nUser {user.first_name} flooding request userbot cant join group, check @Noravc_assistant banned here or contact support"
 
-                                  "<b>add @Noravc_assistant and try again</b>",
+                                  "<b>add @musiqo_Assistant and try again</b>",
 
                               )
 
