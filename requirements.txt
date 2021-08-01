@@ -1,4 +1,3 @@
-https://github.com/ytdl-org/youtube-dl
 pyrogram
 TgCrypto
 py-tgcalls
@@ -32,3 +31,4 @@ youtube_dl
 youtube_search_python
 youtube_search
 wget
+https://github.com/ytdl-org/youtube-dl
