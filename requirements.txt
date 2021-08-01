@@ -1,4 +1,4 @@
-Pyrogram
+pyrogram
 TgCrypto
 py-tgcalls
 python-dotenv
@@ -16,3 +16,4 @@ python-arq
 future
 psutil
 wget
+regex
