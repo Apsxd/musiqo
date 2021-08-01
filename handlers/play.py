@@ -908,7 +908,7 @@ async def play(_, message: Message):
 
         reply_markup=keyboard,
 
-        caption="🎬Song: {title} ⏳Duration: {duration} 💡Info: Get Additional Information 👤Requested by: {requested_by} 🚧Queued at: Playing".format(
+        caption="👤Requested by: {} 🚧Queued at: Playing".format(
 
         message.from_user.mention()
 
