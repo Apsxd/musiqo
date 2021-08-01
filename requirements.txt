@@ -1,4 +1,4 @@
-https://github.com/HasibulKabir/heroku-buildpack-ffmpeg-ffprobe
+https://github.com/ytdl-org/youtube-dl
 pyrogram
 TgCrypto
 py-tgcalls
