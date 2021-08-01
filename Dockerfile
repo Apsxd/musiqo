@@ -11,4 +11,3 @@ WORKDIR /app/
 COPY . /app/
 RUN pip3 install -U -r requirements.txt
 CMD python3 main.py
-BUILDPACK https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
