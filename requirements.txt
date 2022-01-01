@@ -19,3 +19,4 @@ motor
 psutil
 future
 wget
+Python_ARQ
