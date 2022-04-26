@@ -27,4 +27,3 @@ Pyrogram string
  
 
 #Note
-Check full code before deploying
